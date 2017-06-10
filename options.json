@@ -1,0 +1,114 @@
+{
+	"CPG": {
+		"randomLocale": "en",
+		"fields": [
+			{
+				"selector": "#search_person_profile_ssn",
+				"random": "{{helpers.replaceSymbolWithNumber(888-##-####)}}"
+			},
+			{
+				"selector": "#search_person_profile_date_of_birth",
+				"static": "07-11-1966"
+			},
+			{
+				"selector": "#legal_name_designation",
+				"static": "Brother"
+			},
+			{
+				"selector": "#legal_name_first_name",
+				"random": "{{name.firstName}}"
+			},
+			{
+				"selector": "#legal_name_middle_name",
+				"static": "J."
+			},
+			{
+				"selector": "#legal_name_last_name",
+				"random": "{{name.lastName}}"
+			},
+			{
+				"selector": "#legal_name_suffix",
+				"static": ""
+			},
+			{
+				"selector": "#employment_status",
+				"static": "Lay"
+			},
+			{
+				"selector": "#employment_hire_date",
+				"static": "01-01-2010"
+			},
+			{
+				"selector": "#employment_position_title",
+				"static": "Administrator"
+			},
+			{
+				"selector": "#employment_exempt_status",
+				"static": ""
+			},
+			{
+				"selector": "#employment_scheduled_hours",
+				"random": "{{random.number(500)}}"
+			},
+			{
+				"selector": "#employment_stipendiary_no",
+				"static": ""
+			},
+			{
+				"selector": "#person_contact_mailing_address_address1",
+				"random": "{{address.streetAddress}}"
+			},
+			{
+				"selector": "#person_contact_mailing_address_address2",
+				"static": ""
+			},
+			{
+				"selector": "#person_contact_mailing_address_city",
+				"random": "{{address.city}}"
+			},
+			{
+				"selector": "#person_contact_mailing_address_state"
+			},
+			{
+				"selector": "#person_contact_mailing_address_postal_code",
+				"random": "{{address.zipCode}}"
+			},
+			{
+				"selector": "#institution_contact_contact_number-10_countryCode",
+				"static": "1"
+			},
+			{
+				"selector": "#institution_contact_contact_number-10_phoneNumber",
+				"random": "({{helpers.replaceSymbolWithNumber(###)}}) {{helpers.replaceSymbolWithNumber(###-####)}}"
+			},
+			{
+				"selector": "#institution_contact_contact_number-10_phoneExtension",
+				"random": "{{helpers.replaceSymbolWithNumber(###)}}"
+			},
+			{
+				"selector": "#contact_phone_line_type"
+			},
+			{
+				"selector": "#person_contact_personal_email",
+				"random": "{{internet.email}}"
+			},
+			{
+				"selector": "#person_profile_genderMale",
+				"static": ""
+			},
+			{
+				"selector": "#benefits_health_coverage"
+			},
+			{
+				"selector": "#benefits_health_coverage_level"
+			},
+			{
+				"selector": "#benefits_premium_percentage",
+				"random": "{{random.number(20)}}"
+			},
+			{
+				"selector": "#benefits_employer_pension_contribution"
+			}
+		]
+	}
+}

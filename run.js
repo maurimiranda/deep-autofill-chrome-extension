@@ -32,7 +32,7 @@ var htmlInputTypes = {
       "-",
       pad(rndDate.getMonth() + 1, 2),
       "-",
-      pad(rndDate.getDay() + 1, 2), 
+      pad(rndDate.getDay() + 1, 2),
     ].join('');
     return result;
   },
@@ -101,11 +101,11 @@ var randomizeInputValue = function(el){
         var idx = randomInt(0, opts.length - 1);
         var val = opts[idx].value;
         $(el).focus().val(val);
-        break; 
+        break;
       case "textarea":
         $(el).focus().val(faker.lorem.sentences());
         break;
-    }  
+    }
   }
 };
 
@@ -115,7 +115,7 @@ chrome.extension.sendRequest({
 }, function(response){
   if (deepAutofillChromeExtensionSettings){
     if (deepAutofillChromeExtensionSettings.randomLocale){
-      console.info("setting locale", deepAutofillChromeExtensionSettings.randomLocale);
+      console.info("setting locale: ", deepAutofillChromeExtensionSettings.randomLocale);
       faker.locale = deepAutofillChromeExtensionSettings.randomLocale
     }
     for(var i = 0; i < deepAutofillChromeExtensionSettings.fields.length; i++){
@@ -127,17 +127,17 @@ chrome.extension.sendRequest({
       if (field.random){
         value = faker.fake(field.random);
       }
-      
+
       if (!field.static && !field.random){
         randomizeInputValue($(field.selector));
       } else {
-        $(field.selector).focus().val(value);  
+        $(field.selector).focus().val(value);
       }
-      console.debug(field.selector, value);   
+      console.debug(field.selector, value);
     }
   } else {
     $("input:enabled, select:enabled, textarea:enabled").not(':button,:hidden,input[type=submit],input[readonly]').each(function(){
       randomizeInputValue(this);
-    }); 
+    });
   }
-});  
+});
