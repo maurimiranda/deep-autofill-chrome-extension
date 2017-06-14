@@ -59,10 +59,6 @@
 				"random": "{{address.streetAddress}}"
 			},
 			{
-				"selector": "#person_contact_mailing_address_address2",
-				"static": ""
-			},
-			{
 				"selector": "#person_contact_mailing_address_city",
 				"random": "{{address.city}}"
 			},
@@ -108,6 +104,33 @@
 			},
 			{
 				"selector": "#benefits_employer_pension_contribution"
+			},
+			{
+				"selector": "#marital_status_firstName",
+				"random": "{{name.firstName}}"
+			},
+			{
+				"selector": "#marital_status_middleName",
+				"static": "W."
+			},
+			{
+				"selector": "#marital_status_lastName",
+				"random": "{{name.lastName}}"
+			},
+			{
+				"selector": "#marital_status_nameSuffix"
+			},
+			{
+				"selector": "#marital_status_ssn",
+				"random": "{{helpers.replaceSymbolWithNumber(777-##-####)}}"
+			},
+			{
+				"selector": "#marital_status_genderFemale",
+				"static": ""
+			},
+			{
+				"selector": "#marital_status_dateOfBirth",
+				"static": "01-01-1980"
 			}
 		]
 	}
